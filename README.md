@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Chitkara-Grocery-Store
 This is a website of an online grocery shopping platform developed using HTML, CSS and JS. This project involves only frontend coding languages. This was a group project and we will try to make it better. Any feedbacks are welcome on the project. One last thing, I am uploading the images used in this project but we have added the images using the URLs so there should be no need to add them again but still, for reference, we will be uploading the images.
 
@@ -8,3 +9,6 @@ This is a website of an online grocery shopping platform developed using HTML, C
 ![Screenshot 2022-01-24 213417](https://user-images.githubusercontent.com/97402437/161426503-968eea4c-5f58-4f65-9266-9a0fdf96f586.png)
 
 ![Screenshot 2022-01-24 213342](https://user-images.githubusercontent.com/97402437/161426513-002bc807-8451-45c2-9d2b-38a699204459.png)
+=======
+# Grocery-Store
+>>>>>>> ad740eb397e8b8081f858e2b392d28a32a5422f6
