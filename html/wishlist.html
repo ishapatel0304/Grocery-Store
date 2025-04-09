@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="stylesheet" type="text/css" href="../css/wishlist.css">
+    <script src="https://kit.fontawesome.com/9088cc6401.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="wishlist-container">
+        <h1>My Wishlist ❤️</h1>
+        <div id="wishlist-items"></div>
+    </div>
+    <div class="continue-shopping-container">
+        <a href="../html/home.html" class="continue-shopping">Continue Adding</a>
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        let wishlistContainer = document.getElementById("wishlist-items");
+    
+        if (wishlist.length === 0) {
+            wishlistContainer.innerHTML = "<p>Your wishlist is empty!</p>";
+            return;
+        }
+    
+        wishlist.forEach(item => {
+            let wishlistItem = document.createElement("div");
+            wishlistItem.classList.add("wishlist-item");
+            wishlistItem.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" class="wishlist-item-image">
+                <div class="wishlist-item-details">
+                    <p><strong>${item.name}</strong></p>
+                    <p>Price: Rs. ${item.price}</p>
+                    <button class="remove-wishlist-item" data-id="${item.id}">Remove</button>
+                </div>
+            `;
+    
+            wishlistContainer.appendChild(wishlistItem);
+        });
+    
+        document.body.addEventListener("click", function (event) {
+            if (event.target.classList.contains("remove-wishlist-item")) {
+                let productId = event.target.getAttribute("data-id");
+                removeFromWishlist(productId);
+            }
+        });
+    
+        function removeFromWishlist(productId) {
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+            wishlist = wishlist.filter(item => item.id !== productId);
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+            location.reload();
+        }
+    });
+    </script>
+    
+    
+</body>
+
+</html>

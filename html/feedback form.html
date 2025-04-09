@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/9088cc6401.js" crossorigin="anonymous"></script>
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+        body {
+            color: #fff;
+            background: rgb(255, 255, 255, 0.9);
+            font-family: 'Roboto', sans-serif;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .form-control {
+            min-height: 50px;
+            border-color: #e1e4e5;
+        }
+
+        .form-control, .btn {
+            border-radius: 3px;
+        }
+
+        .feedback-form {
+            width: 450px;
+            margin: 0 auto;
+            padding: 30px 0;
+        }
+
+        .feedback-form form {
+            color: #9ba5a8;
+            border-radius: 3px;
+            background: #e9e6e6;
+            box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+            padding: 30px;
+        }
+
+        .feedback-form h2 {
+            color: #333;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .feedback-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .feedback-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .feedback-options label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .feedback-form textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .feedback-form .btn {
+            font-size: 16px;
+            font-weight: bold;
+            background: #5ccf71;
+            border: none;
+            min-width: 140px;
+            color: white;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .feedback-form .btn:hover {
+            background: #1b4422;
+        }
+
+        .text-center {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .text-center a {
+            color: #5fcaba;
+            text-decoration: none;
+        }
+
+        .text-center a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="feedback-form">
+    <form id="feedbackForm">
+        <h2>Feedback Form</h2>
+        <p style="text-align: center;">We would love to hear your thoughts, suggestions, or concerns!</p>
+        <hr>
+
+        <div class="form-group">
+            <label>Feedback Type</label>
+            <div class="feedback-options">
+                <input type="radio" name="feedback-type" id="comments">
+                <label for="comments">Comments</label>
+
+                <input type="radio" name="feedback-type" id="suggestions">
+                <label for="suggestions">Suggestions</label>
+
+                <input type="radio" name="feedback-type" id="questions">
+                <label for="questions">Questions</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="feedback">Describe Your Feedback:</label>
+            <textarea id="feedback" class="form-control" ></textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" name="first-name" placeholder="First Name" >
+        </div>
+
+        <div class="form-group">
+            <input type="text" class="form-control" name="last-name" placeholder="Last Name" >
+        </div>
+
+        <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email Address" >
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn"><a href="../html/feedback form conformation.html" style="color: #fff;">Submit</a></button>
+        </div>
+    </form>
+
+    <div class="text-center" style="color: #333;">Already provided feedback? <a href="#">View Responses</a></div>
+</div>
+
+
+</body>
+</html>
